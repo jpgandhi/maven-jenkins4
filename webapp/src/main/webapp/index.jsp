@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>New user Register for equity fno Training at Devops TechLab, Mehsana.</h1>
+    <h1>New user Register for Training at Devops TechLab for Trading in future and options.</h1>
     <p>Please fill in this form to create an account for training.</p>
     <hr>
      
