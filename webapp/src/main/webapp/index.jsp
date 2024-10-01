@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>New user Register for Equity Future Options Training at Devops TechLab, Ahmedabad.</h1>
+    <h1>New user Register for Equity Shares at Devops TechLab, Ahmedabad.</h1>
     <p>Please fill in this form to create an account for training.</p>
     <hr>
      
