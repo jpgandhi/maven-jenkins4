@@ -1,16 +1,32 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven3'
+        java 'java17'
+    }
     stages {
-        stage('copy artifact') {
+        stage('download code from git') {
             steps {
-                echo "copy artifact from other job"
-                copyArtifacts filter: '**/*.war', fingerprintArtifacts: true, projectName: 'pipeline-build', selector: lastSuccessful()
+                echo "this will download code from git"
+                git branch: 'main', url: 'https://github.com/jpgandhi/maven-jenkins4.git'
             }
         }
-        stage('upload to tomcat server') {
+        stage('make build using maven') {
             steps {
-                echo "upload build war file to tomcat server"
-                deploy adapters: [tomcat9(credentialsId: 'tomcatcred', path: '', url: 'http://65.0.92.117:8090/')], contextPath: null, war: '**/*.war' 
+                echo "build java project using maven"
+                sh 'mvn clean package'
+            }
+        }
+        stage('archive the build file') {
+            steps {
+                echo "archive the build war file"
+                archiveArtifacts artifacts: '**/*.war', followSymlinks: false
+            }
+        }
+        stage('start build other project') {
+            steps {
+                echo "trigger the other project job"
+                build wait: false, job: 'pipeline-deploy'
             }
         }
     }
