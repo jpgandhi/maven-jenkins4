@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         maven 'maven3'
-        java 'java17'
+        jdk 'java17'
     }
     stages {
         stage('download code from git') {
