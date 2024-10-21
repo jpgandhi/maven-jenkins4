@@ -1,14 +1,14 @@
 <form action="action_page.php">
   <div class="container">
     <h1>New user Register for Jenkins Training at Devops TechLab, Ahmedabad.</h1>
-    <p>Please fill in this form to register.</p>
+    <p>Please fill in this form to enroll your name.</p>
     <hr>
      
-    <label for="Name"><b>Enter Name</b></label>
+    <label for="Name"><b>Enter Full Name</b></label>
     <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
     <br>
     
-    <label for="mobile"><b>Enter mobile</b></label>
+    <label for="mobile"><b>Enter mobile no.</b></label>
     <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
     <br>
 
