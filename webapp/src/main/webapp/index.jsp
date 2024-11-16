@@ -1,6 +1,6 @@
 <form action="action_page.php">
   <div class="container">
-    <h1>New user Register for Jenkins full course at Devops TechLab, Ahmedabad</h1>
+    <h1>New user Register for Devops Training full course at Devops TechLab, Ahmedabad</h1>
     <p>Please fill in this form to enroll your name.</p>
     <hr>
      
